@@ -15,7 +15,7 @@
             <p><input type="text" ng-model="compute" placeholder="Enter a number"></p>
             <h1>: {{compute}}</h1>
             <div class='numbers'>
-                <button>1</button>
+                <button id='1'>1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>/</button>
@@ -31,13 +31,7 @@
                 <button>0</button>
                 <button>.</button>
                 <button>+</button>
-                
-                
-                
-                
-                
-                
-            
+                  
             </div>
                 <div class="op"></div>
         </div>
@@ -46,7 +40,11 @@
 </body>
 <!-- Separate HTML from css -->
     
-    
+    <script>
+        function myFunction() {
+    document.getElementById("1").innerHTML = "1";
+}
+    </script>
     
     
    
