@@ -5,6 +5,7 @@
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link rel = "stylesheet" type = "text/css" href = "styles/calcStyle.css" />
+        
     </head>
 
     
@@ -15,7 +16,7 @@
             <p><input type="text" ng-model="compute" placeholder="Enter a number"></p>
             <h1>: {{compute}}</h1>
             <div class='numbers'>
-                <button id='1'>1</button>
+                <button ng-click = button1()>1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>/</button>
@@ -31,7 +32,6 @@
                 <button>0</button>
                 <button>.</button>
                 <button>+</button>
-                  
             </div>
                 <div class="op"></div>
         </div>
@@ -43,7 +43,7 @@
     <script>
         function myFunction() {
     document.getElementById("1").innerHTML = "1";
-}
+        }
     </script>
     
     
