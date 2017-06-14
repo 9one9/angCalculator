@@ -65,3 +65,8 @@ html
             height: 80%;
             border-radius: 7px;
         }
+        .numLine
+        {
+            margin:0 auto;
+            position:relative;
+        }

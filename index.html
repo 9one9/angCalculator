@@ -1,52 +1,49 @@
 <!DOCTYPE HTML>
-<html>
+<html ng-app="calcApp">
+     
     <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel = "stylesheet" type = "text/css" href = "styles/calcStyle.css" />
         <title>Simple Calulator</title>
             <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link rel = "stylesheet" type = "text/css" href = "styles/calcStyle.css" />
-        
+        <script type="text/javascript" src="js/script.js"></script>
     </head>
 
     
 <body>
-    <p>Four function Calculator</p>
+    <p>Four Function Calculator</p>
     <div class="container">
-        <div class='calcBox' ng-app=""> 
-            <p><input type="text" ng-model="compute" placeholder="Enter a number"></p>
-            <h1>: {{compute}}</h1>
+    
+        <div ng-controller="CalcCtrl as ctrl"> 
+            
+           
+            <input class="numLine" type="text" ng-model="ctrl.input1" >
+            <span ng-bind="ctrl.selectOperator"></span>
+            <input class="numLine"  type="text" ng-model="ctrl.input2">
+             {{ctrl.input1}}
+            <button ng-click="ctrl.compute()">=</button>
+            <span ng-bind="ctrl.result"></span>
             <div class='numbers'>
-                <button ng-click = button1()>1</button>
+                <button>1</button>
                 <button>2</button>
                 <button>3</button>
-                <button>/</button>
+                <button ng-click="ctrl.gotClicked('/')">/</button>
                 <button>4</button>
                 <button>5</button>
                 <button>6</button>
-                <button>*</button>
+                <button ng-click="ctrl.gotClicked('*')">*</button>
                 <button>7</button>
                 <button>8</button>
                 <button>9</button>
-                <button>-</button>
+                <button ng-click="ctrl.gotClicked('-')">-</button>
                 <button>.</button>
                 <button>0</button>
                 <button>.</button>
-                <button>+</button>
+                <button ng-click="ctrl.gotClicked('+')">+</button>
             </div>
+            
                 <div class="op"></div>
-        </div>
+        </div>  <!--End calcBox --> 
     </div>
-    
 </body>
-<!-- Separate HTML from css -->
-    
-    <script>
-        function myFunction() {
-    document.getElementById("1").innerHTML = "1";
-        }
-    </script>
-    
-    
-   
-
 </html>
