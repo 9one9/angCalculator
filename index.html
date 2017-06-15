@@ -14,13 +14,12 @@
     <p>Four Function Calculator</p>
     <div class="container">
     
-        <div ng-controller="CalcCtrl as ctrl"> 
-            
-           
+        <div ng-controller="CalcCtrl as ctrl">   
             <input class="numLine" type="text" ng-model="ctrl.input1" >
-            <span ng-bind="ctrl.selectOperator"></span>
-            <input class="numLine"  type="text" ng-model="ctrl.input2">
-             {{ctrl.input1}}
+                <span ng-bind="ctrl.selectOperator"></span>
+                    <input class="numLine"  type="text" ng-model="ctrl.input2">
+                    {{ctrl.input1}}
+                    {{ctrl.input2}}
             <button ng-click="ctrl.compute()">=</button>
             <span ng-bind="ctrl.result"></span>
             <div class='numbers'>
